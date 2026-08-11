@@ -27,5 +27,25 @@ class Settings(BaseSettings):
     s3_secret_key: str = "minioadmin"
     s3_bucket: str = "marketscopilot-docs"
 
+    # Auth
+    jwt_secret: str = "change-this-to-a-long-random-string"
+    jwt_algorithm: str = "HS256"
+    jwt_expiry_minutes: int = 60
+
+    # Observability
+    otel_exporter_otlp_endpoint: str = "http://otel-collector:4317"
+    service_name: str = "marketscopilot-api"
+
+    @property
+    def postgres_dsn(self) -> str:
+        return (
+            f"postgresql+psycopg2://{self.postgres_user}:{self.postgres_password}"
+            f"@{self.postgres_host}:{self.postgres_port}/{self.postgres_db}"
+        )
+
+    class Config:
+        env_file = ".env"
+        extra = "ignore"
+
 
 settings = Settings()
