@@ -27,3 +27,11 @@ class QueryResponse(BaseModel):
     review_reason: Optional[str] = None
     session_id: str
     trace_id: str
+
+
+class RetrievedChunk(BaseModel):
+    chunk_id: str
+    source_doc: str
+    text: str
+    classification: str  # e.g. "public", "front_office_only"
+    score: float
