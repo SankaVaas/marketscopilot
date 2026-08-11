@@ -15,7 +15,7 @@ langgraph==0.2.34
 langchain-core==0.3.9
 
 # MCP tool server
-mcp==1.0.0
+mcp==1.28.1
 
 # Retrieval
 qdrant-client==1.11.2
