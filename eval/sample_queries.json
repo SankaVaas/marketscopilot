@@ -1,0 +1,28 @@
+[
+  {
+    "query": "What is the current view on the yield curve and rate cuts?",
+    "expected_source_docs": ["market_note_1.md"],
+    "role": "public_reader"
+  },
+  {
+    "query": "What are the FX market volatility themes this week?",
+    "expected_source_docs": ["market_note_2.md"],
+    "role": "public_reader"
+  },
+  {
+    "query": "What is the desk's internal positioning on duration?",
+    "expected_source_docs": ["fo_note_rates_view.md"],
+    "role": "front_office_analyst"
+  },
+  {
+    "query": "What are the research distribution tiers under compliance policy?",
+    "expected_source_docs": ["compliance_policy.md"],
+    "role": "compliance_officer"
+  },
+  {
+    "query": "What is the desk's internal positioning on duration?",
+    "expected_source_docs": [],
+    "role": "public_reader",
+    "note": "This should return no chunks -- tests RBAC/entitlement filtering, not just relevance."
+  }
+]
