@@ -11,7 +11,7 @@ SCOPE_SYSTEM_PROMPT = (
 )
 
 
-def planner_node(state: AgentState) -> AgentState:
+def planner_no0de(state: AgentState) -> AgentState:
     verdict = chat(
         messages=[
             {"role": "system", "content": SCOPE_SYSTEM_PROMPT},
