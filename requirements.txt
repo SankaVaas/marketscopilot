@@ -28,7 +28,7 @@ psycopg2-binary==2.9.9
 boto3==1.35.24          # used against MinIO's S3-compatible API
 
 # Observability
-opentelemetry-api==1.27.0
+opentelemetry-api==1.45.1
 opentelemetry-sdk==1.27.0
 opentelemetry-instrumentation-fastapi==0.48b0
 opentelemetry-exporter-otlp==1.27.0
